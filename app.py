@@ -10,7 +10,7 @@ if st.button("Generate"):
         with st.spinner("Generating synonyms..."):
             try:
                 response = requests.post(
-                    "http://127.0.0.1:8000/generate-synonyms",
+                    "https://distributors-dekh-production.up.railway.app/generate-synonyms",
                     json={"word": word}
                 )
                 if response.status_code == 200:
